@@ -101,9 +101,12 @@ static const keymap_t keys[] = {
 	{ 0,            XK_R,             t_reload_all,         None },
 
 	{ 0,            XK_n,             i_navigate,           +1 },
+	{ 0,            XK_period,        i_navigate,           +1 },
 	{ 0,            XK_n,             i_scroll_to_edge,     DIR_LEFT | DIR_UP },
 	{ 0,            XK_space,         i_navigate,           +1 },
+	{ ShiftMask,    XK_space,         i_navigate,           -1 },
 	{ 0,            XK_p,             i_navigate,           -1 },
+	{ 0,            XK_comma,         i_navigate,           -1 },
 	{ 0,            XK_p,             i_scroll_to_edge,     DIR_LEFT | DIR_UP },
 	{ 0,            XK_BackSpace,     i_navigate,           -1 },
 	{ 0,            XK_bracketright,  i_navigate,           +10 },
@@ -147,6 +150,8 @@ static const button_t buttons[] = {
 	{ 0,            3,                g_switch_mode,        None },
 	{ 0,            4,                g_zoom,               +1 },
 	{ 0,            5,                g_zoom,               -1 },
+	{ ControlMask,  4,                i_navigate,           -1 },
+	{ ControlMask,  5,                i_navigate,           +1 },
 };
 
 #endif
